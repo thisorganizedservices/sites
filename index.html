@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>This Organized</title>
+
+  <style>
+    /* GLOBAL */
+    * { margin:0; padding:0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+    body { background: #FAFAF9; color: #333; }
+
+    a { text-decoration:none; color: #333; }
+    a:hover { opacity: 0.8; }
+
+    /* NAV */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #E4E4E1;
+      padding: 18px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .nav-container {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo { font-size:1.8rem; font-weight:bold; color:#444; }
+
+    nav ul { list-style:none; display:flex; gap:18px; }
+    nav li { font-size:1rem; font-weight:500; }
+
+    /* HERO */
+    .hero {
+      background: url("hero.jpg") center/cover no-repeat;
+      height: 450px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color: #FFF;
+      padding: 0 30px;
+    }
+    .hero h1 { font-size:2.8rem; text-shadow:2px 2px 6px rgba(0,0,0,0.5); }
+    .hero p { margin-top:8px; font-size:1.2rem; text-shadow:1px 1px 3px rgba(0,0,0,0.4); }
+
+    /* SECTIONS */
+    section { padding:60px 30px; }
+    .section-title {
+      font-size:2.2rem;
+      text-align:center;
+      margin-bottom:16px;
+      color:#444;
+    }
+    .center { text-align:center; }
+
+    /* ABOUT */
+    .about-container { max-width:900px; margin:auto; font-size:1.05rem; line-height:1.6; }
+
+    /* SERVICES */
+    .services-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:24px;
+      max-width:1000px;
+      margin:auto;
+    }
+    .service-card {
+      background: #FFF;
+      border:1px solid #E4E4E1;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .service-card img { width:100%; height:200px; object-fit:cover; }
+    .service-card h3 { padding:12px 15px; font-size:1.25rem; color:#B58C3F; }
+    .service-card p { padding:0 15px 15px; font-size:1rem; color:#555; }
+
+    /* CONTACT FORM */
+    .contact-form { max-width:700px; margin:auto; }
+    .contact-form input,
+    .contact-form textarea {
+      width:100%;
+      margin-bottom:15px;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:1rem;
+    }
+    .contact-form button {
+      background:#B58C3F;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      font-size:1.1rem;
+      cursor:pointer;
+      border-radius:5px;
+    }
+    .contact-form button:hover { background:#936D2A; }
+
+    /* FOOTER */
+    footer {
+      background:#444;
+      color:#fff;
+      text-align:center;
+      padding:20px 0;
+      font-size:0.95rem;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">This Organized</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Professional Organizing Services</h1>
+      <p>Transforming spaces into calm, functional places</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <p>Hello! I’m Diana, a professional organizer helping you create tidy, beautiful, and functional spaces. I combine efficiency with creativity to transform homes and offices. My passion started early and continues to this day — because organized spaces make life easier and calmer.</p>
+   — clean, approachable, warm, and professional.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">What I Offer</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="service1.jpg" alt="Service Image">
+        <h3>Professional Organizing</h3>
+        <p>Declutter and organize closets, rooms, and storage areas.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="service2.jpg" alt="Service Image">
+        <h3>Space Planning</h3>
+        <p>Optimize layouts and create functional spaces just for you.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="service3.jpg" alt="Service Image">
+        <h3>Virtual Consultation</h3>
+        <p>Online organizing help and personalized tips.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2 class="section-title center">What Clients Say</h2>
+    <p class="center">“Amazing service and transformed my home!” — Happy Client</p>
+    <p class="center">“Made organizing so easy and stress-free.” — Another Client</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 This Organized</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thanks for contacting me! I will reply soon.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
