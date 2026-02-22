@@ -2,118 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This Organized</title>
 
   <style>
-    /* GLOBAL */
-    * { margin:0; padding:0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
-    body { background: #FAFAF9; color: #333; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-    a { text-decoration:none; color: #333; }
-    a:hover { opacity: 0.8; }
+    body {
+      background-color: #FAFAF9;
+      color: #333;
+    }
 
-    /* NAV */
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* NAVIGATION */
     header {
-      background: #fff;
-      border-bottom: 1px solid #E4E4E1;
-      padding: 18px 30px;
+      background: #ffffff;
+      padding: 18px 40px;
+      border-bottom: 1px solid #e4e4e1;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
-    header .nav-container {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .logo { font-size:1.8rem; font-weight:bold; color:#444; }
 
-    nav ul { list-style:none; display:flex; gap:18px; }
-    nav li { font-size:1rem; font-weight:500; }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav li {
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #B58C3F;
+    }
 
     /* HERO */
     .hero {
-      background: url("hero.jpg") center/cover no-repeat;
-      height: 450px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color: #FFF;
-      padding: 0 30px;
+      background: #ffffff;
+      padding: 80px 20px;
+      text-align: center;
     }
-    .hero h1 { font-size:2.8rem; text-shadow:2px 2px 6px rgba(0,0,0,0.5); }
-    .hero p { margin-top:8px; font-size:1.2rem; text-shadow:1px 1px 3px rgba(0,0,0,0.4); }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #777;
+    }
+
+    /* ABOUT HEADER IMAGE */
+    .about-header {
+      width: 100%;
+      height: 450px;
+      background: url("about-header.jpg") center center/cover no-repeat;
+    }
 
     /* SECTIONS */
-    section { padding:60px 30px; }
-    .section-title {
-      font-size:2.2rem;
-      text-align:center;
-      margin-bottom:16px;
-      color:#444;
+    section {
+      padding: 70px 20px;
     }
-    .center { text-align:center; }
 
-    /* ABOUT */
-    .about-container { max-width:900px; margin:auto; font-size:1.05rem; line-height:1.6; }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      text-align: center;
+    }
 
     /* SERVICES */
     .services-grid {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:24px;
-      max-width:1000px;
-      margin:auto;
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
     }
-    .service-card {
-      background: #FFF;
-      border:1px solid #E4E4E1;
-      border-radius:8px;
-      overflow:hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    .service-card img { width:100%; height:200px; object-fit:cover; }
-    .service-card h3 { padding:12px 15px; font-size:1.25rem; color:#B58C3F; }
-    .service-card p { padding:0 15px 15px; font-size:1rem; color:#555; }
 
-    /* CONTACT FORM */
-    .contact-form { max-width:700px; margin:auto; }
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: center;
+    }
+
+    .service-card h3 {
+      color: #B58C3F;
+      margin-bottom: 15px;
+    }
+
+    /* CONTACT */
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+    }
+
     .contact-form input,
     .contact-form textarea {
-      width:100%;
-      margin-bottom:15px;
-      padding:12px;
-      border:1px solid #ccc;
-      border-radius:5px;
-      font-size:1rem;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
     }
+
     .contact-form button {
-      background:#B58C3F;
-      color:white;
-      border:none;
-      padding:12px 20px;
-      font-size:1.1rem;
-      cursor:pointer;
-      border-radius:5px;
+      background: #B58C3F;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .contact-form button:hover { background:#936D2A; }
+
+    .contact-form button:hover {
+      background: #936D2A;
+    }
 
     /* FOOTER */
     footer {
-      background:#444;
-      color:#fff;
-      text-align:center;
-      padding:20px 0;
-      font-size:0.95rem;
+      background: #444;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95rem;
     }
-  </style>
 
+  </style>
 </head>
+
 <body>
 
-  <!-- NAV -->
+  <!-- NAVIGATION -->
   <header>
     <div class="nav-container">
       <div class="logo">This Organized</div>
@@ -121,69 +178,64 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <div>
-      <h1>Professional Organizing Services</h1>
-      <p>Transforming spaces into calm, functional places</p>
-    </div>
+    <h1>Professional Organizing Services</h1>
+    <p>Creating Calm, Functional Spaces</p>
   </section>
 
-  <!-- ABOUT -->
+  <!-- IMAGE HEADER ABOVE ABOUT -->
+  <div class="about-header"></div>
+
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-      <p>Hello! I’m Diana, a professional organizer helping you create tidy, beautiful, and functional spaces. I combine efficiency with creativity to transform homes and offices. My passion started early and continues to this day — because organized spaces make life easier and calmer.</p>
-   — clean, approachable, warm, and professional.</p>
+    <div class="about-content">
+      <p>
+        Welcome! I specialize in transforming homes into organized, beautiful spaces.
+        My goal is to create functional environments that reduce stress and bring peace into your everyday life.
+      </p>
+      <p>
+        Every space deserves clarity, balance, and intention.
+      </p>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services">
-    <h2 class="section-title">What I Offer</h2>
+    <h2 class="section-title">Services</h2>
     <div class="services-grid">
       <div class="service-card">
-        <img src="service1.jpg" alt="Service Image">
-        <h3>Professional Organizing</h3>
-        <p>Declutter and organize closets, rooms, and storage areas.</p>
+        <h3>Home Organizing</h3>
+        <p>Declutter and organize kitchens, closets, and living spaces.</p>
       </div>
 
       <div class="service-card">
-        <img src="service2.jpg" alt="Service Image">
         <h3>Space Planning</h3>
-        <p>Optimize layouts and create functional spaces just for you.</p>
+        <p>Functional layouts tailored to your needs.</p>
       </div>
 
       <div class="service-card">
-        <img src="service3.jpg" alt="Service Image">
-        <h3>Virtual Consultation</h3>
-        <p>Online organizing help and personalized tips.</p>
+        <h3>Consultations</h3>
+        <p>Personalized advice and virtual organizing sessions.</p>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <h2 class="section-title center">What Clients Say</h2>
-    <p class="center">“Amazing service and transformed my home!” — Happy Client</p>
-    <p class="center">“Made organizing so easy and stress-free.” — Another Client</p>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title">Contact</h2>
     <div class="contact-form">
       <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Email Address" required>
-        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -191,16 +243,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 This Organized</p>
+    © 2026 This Organized | All Rights Reserved
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JAVASCRIPT -->
   <script>
     document.getElementById("contactForm").addEventListener("submit", function(e){
       e.preventDefault();
-      alert("Thanks for contacting me! I will reply soon.");
+      alert("Thank you! Your message has been sent.");
       this.reset();
     });
   </script>
+
 </body>
 </html>
